@@ -1,0 +1,7 @@
+cookies_telling.list:
+  path: '/cookies_telling/list'
+  defaults:
+    _controller: '\Drupal\cookies_telling\Controller\CookiesTellingController::content'
+    _title: 'All My Cookies Telling'
+  requirements:
+    _permission: 'access content'

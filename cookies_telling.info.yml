@@ -1,0 +1,10 @@
+name: Cookies Telling Module
+description: Creates a page to tell how and which cookies I like.
+package: Yummi
+
+type: module
+core: 8.x
+
+configure: cookies_telling.settings
+
+php: 7.3
