@@ -1,7 +1,57 @@
-cookies_telling.list:
-  path: '/cookies_telling/list'
+# This file brings everything together. Very nifty!
+
+# Route name can be used in several places; e.g. links, redirects, and local
+# actions.
+entity.cookie.canonical:
+  path: '/cookie/{cookie}'
   defaults:
-    _controller: '\Drupal\cookies_telling\Controller\CookiesTellingController::content'
-    _title: 'All My Cookies Telling'
+    # Calls the view controller, defined in the annotation of the contact
+    # entity. This marks this route as belonging to this entity type.
+    _entity_view: 'cookie'
+    _title: 'Cookie content'
   requirements:
-    _permission: 'access content'
+    _permission: 'admin content'
+
+entity.cookie.collection:
+  path: '/cookie/list'
+  defaults:
+  # Calls the list controller, defined in the annotation of the contact entity.
+    _entity_list: 'cookie'
+    _title: 'Cookie list'
+  requirements:
+    _permission: 'admin content'
+
+entity.cookie.add_page:
+  path: '/cookie/add'
+  defaults:
+    # Calls the form.add controller, defined in the contact entity.
+    _entity_form: cookie.default
+    _title: 'Add cookie'
+  requirements:
+    _permission: 'admin content'
+
+entity.cookie.edit_form:
+  path: '/cookie/{cookie}/edit'
+  defaults:
+  # Calls the form.edit controller, defined in the contact entity.
+    _entity_form: cookie.default
+    _title: 'Edit cookie'
+  requirements:
+    _permission: 'admin content'
+
+entity.cookie.delete_form:
+  path: '/cookie/{cookie}/delete'
+  defaults:
+    # Calls the form.delete controller, defined in the contact entity.
+    _entity_form: cookie.delete
+    _title: 'Delete cookie'
+  requirements:
+    _permission: 'admin content'
+
+cookies_telling.cookies_telling_settings:
+  path: '/admin/config/cookies_telling/settings'
+  defaults:
+    _form: '\Drupal\cookies_telling\Form\CookiesTellingSettingsForm'
+    _title: 'Cookies Telling settings'
+  requirements:
+    _permission: 'admin content'

@@ -1,0 +1,11 @@
+# Define the 'local' links for the module
+
+cookie.settings:
+  route_name: cookies_telling.cookies_telling_settings
+  title: Settings
+  base_route: entity.cookie.collection
+
+cookie.list:
+  route_name: entity.cookie.collection
+  base_route: entity.cookie.collection
+  title: Cookies List

@@ -15,7 +15,7 @@ class CookiesTellingController extends ControllerBase {
    * @return array
    *   Return markup array.
    */
-  public function content() {
+  public function list() {
     return [
       '#type' => 'markup',
       '#markup' => $this->t('Here will be all my favorite cookies!'),

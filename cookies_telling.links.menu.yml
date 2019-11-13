@@ -1,6 +1,10 @@
-cookies_telling.admin:
-  title: 'Cookies Telling module settings'
-  description: 'example of how to make an admin settings page link'
+entity.cookie.collection:
+  title: 'All the Cookies'
+  route_name: entity.cookie.collection
+  description: 'List Cookies'
+  parent: system.admin
+cookies_telling.admin.config:
+  title: 'Cookies Telling settings'
+  description: 'Configure Cookies entity'
+  route_name:  cookies_telling.cookies_telling_settings
   parent: system.admin_config_development
-  route_name: cookies_telling.list
-  weight: 100

@@ -1,0 +1,11 @@
+# All action links for this module
+
+cookies_telling.cookie_add:
+  # Which route will be called by the link
+  route_name: entity.cookie.add_page
+  title: 'Add Cookie'
+
+  # Where will the link appear, defined by route name.
+  appears_on:
+    - entity.cookie.collection
+
